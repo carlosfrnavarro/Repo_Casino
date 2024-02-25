@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GALGOS</title>
+    <link rel="stylesheet" type="text/css" href="galgos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="pablocanino.jpeg" class="logo-img" />
+        <h1>PABLO CANINO</h1>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="inicio.html">INICIO</a></li>
+        <li><a href="inicio.html">REGLAS</a></li>
+        <li><a href="inicio.html">IDIOMA</a></li>
+        <li><a id="btnAyuda" href="#">AYUDA</a></li>
+
+        <div id="modalAyuda" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>¿COMO JUGAR?</h2>
+              <p>1. Ingresa la cantidad de tu apuesta.</p>
+              <p>2. Selecciona un galgo para apostar.</p>
+              <p>3. Observa la carrera y espera los resultados.</p>
+              <p>4. Las ganancias se calculan basadas en las cuotas del galgo y tu apuesta.</p>
+              <p>Buena suerte :)</p>
+          </div>
+      </div>
+
+        <li>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">CONTACTO</a>
+        </li>
+        <li id="combobox-li">
+          <select id="opciones">
+            <option value="opcion1">MADRID</option>
+            <option value="opcion2">BARCELONA</option>
+            <option value="opcion3">SEVILLA</option>
+            <option value="opcion4">BILBAO</option>
+            <option value="opcion5">ALBACETE</option>
+          </select>
+        </li>
+        <li>
+          <div class="clock">
+            <div id="time"></div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="primer-contenedor">
+      <div class="forma-azul">
+        <h2>-Elige a tu Campeón-</h2>
+
+        <fieldset>
+          <p id="numero1"></p>
+          <p id="nombre1"></p>
+          <p id="cuota1"></p>
+          <button id="apuesta1" class="apostar-btn">Apostar</button>
+      </fieldset>
+      
+      <fieldset>
+          <p id="numero2"></p>
+          <p id="nombre2"></p>
+          <p id="cuota2"></p>
+          <button id="apuesta2" class="apostar-btn">Apostar</button>
+      </fieldset>
+      
+      <fieldset>
+          <p id="numero3"></p>
+          <p id="nombre3"></p>
+          <p id="cuota3"></p>
+          <button id="apuesta3" class="apostar-btn">Apostar</button>
+      </fieldset>
+      
+      <fieldset>
+          <p id="numero4"></p>
+          <p id="nombre4"></p>
+          <p id="cuota4"></p>
+          <button id="apuesta4" class="apostar-btn">Apostar</button>
+      </fieldset>
+      
+      <fieldset>
+          <p id="numero5"></p>
+          <p id="nombre5"></p>
+          <p id="cuota5"></p>
+          <button id="apuesta5" class="apostar-btn">Apostar</button>
+      </fieldset>
+      
+      <fieldset>
+          <p id="numero6"></p>
+          <p id="nombre6"></p>
+          <p id="cuota6"></p>
+          <button id="apuesta6" class="apostar-btn">Apostar</button>
+      </fieldset>
+      
+      <fieldset>
+          <p id="numero7"></p>
+          <p id="nombre7"></p>
+          <p id="cuota7"></p>
+          <button id="apuesta7" class="apostar-btn">Apostar</button>
+      </fieldset>
+      
+      <fieldset>
+          <p id="numero8"></p>
+          <p id="nombre8"></p>
+          <p id="cuota8"></p>
+          <button id="apuesta8" class="apostar-btn">Apostar</button>
+      </fieldset>
+      <button id="btnVerEstadisticas" class="boton-estandar">VER ESTADÍSTICAS</button>
+      
+      </div>
+      <div id="modalEstadisticas" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="contenidoEstadisticas"></div>
+        </div>
+    </div>
+    </div>
+
+    <div class="segundo-contenedor">
+      <div class="forma-azul-2">
+        <fieldset class="fieldset-clasificacion">
+          <legend>Clasificación</legend>
+          <table>
+            <tr>
+              <td id="posicion1"></td>
+              <td>
+                <div class="progreso" id="progreso1"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td id="posicion2"></td>
+              <td>
+                <div class="progreso" id="progreso2"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td id="posicion3"></td>
+              <td>
+                <div class="progreso" id="progreso3"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td id="posicion4"></td>
+              <td>
+                <div class="progreso" id="progreso4"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td id="posicion5"></td>
+              <td>
+                <div class="progreso" id="progreso5"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td id="posicion6"></td>
+              <td>
+                <div class="progreso" id="progreso6"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td id="posicion7"></td>
+              <td>
+                <div class="progreso" id="progreso7"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td id="posicion8"></td>
+              <td>
+                <div class="progreso" id="progreso8"></div>
+              </td>
+            </tr>
+          </table>
+          <button id="btnIniciarCarrera" class="boton-estandar">Iniciar Carrera</button>
+
+        </fieldset>
+
+        <fieldset class="fieldset-apuestas">
+          <legend>Apuestas</legend>
+          <fieldset id="fieldset_apuesta_1">
+            <p id="numero1"></p>
+            <p id="nombre1"></p>
+            <p id="ganancia1"></p>
+          </fieldset>
+
+          <fieldset id="fieldset_apuesta_2">
+            <p id="numero2"></p>
+            <p id="nombre2"></p>
+            <p id="ganancia2"></p>
+          </fieldset>
+
+          <fieldset id="fieldset_apuesta_3">
+            <p id="numero3"></p>
+            <p id="nombre3"></p>
+            <p id="ganancia3"></p>
+          </fieldset>
+
+          <fieldset id="fieldset_apuesta_4">
+            <p id="numero4"></p>
+            <p id="nombre4"></p>
+            <p id="ganancia4"></p>
+          </fieldset>
+
+          <fieldset id="fieldset_apuesta_5">
+            <p id="numero5"></p>
+            <p id="nombre5"></p>
+            <p id="ganancia5"></p>
+          </fieldset>
+
+          <fieldset id="fieldset_apuesta_6">
+            <p id="numero6"></p>
+            <p id="nombre6"></p>
+            <p id="ganancia6"></p>
+          </fieldset>
+
+          <fieldset id="fieldset_apuesta_7">
+            <p id="numero7"></p>
+            <p id="nombre7"></p>
+            <p id="ganancia7"></p>
+          </fieldset>
+
+          <fieldset id="fieldset_apuesta_8">
+            <p id="numero8"></p>
+            <p id="nombre8"></p>
+            <p id="ganancia8"></p>
+          </fieldset>
+        </fieldset>
+      </div>
+    </div>
+
+    <div class="tercer-contenedor">
+      <div class="forma-azul-3">
+        <fieldset class="fieldset-dinero">
+          <fieldset class="invisible-fieldset">
+            <p class="apuesta">APUESTA TOTAL: 0 fichas</p>
+            <p id="dinero_banco" class="saldo">SALDO: 0 fichas</p>
+          </fieldset>
+
+          <fieldset class="fieldset-ingresaretirar">
+            <input
+              type="button"
+              id="BtnApostar"
+              value="INGRESAR APUESTA"
+              class="boton-dinero"
+            />
+            <input
+              type="submit"
+              id="BtnRetirar"
+              value="RETIRAR SALDO"
+              class="boton-dinero"
+            />
+            <input
+              type="button"
+              id="BtnIngresar"
+              value="INGRESAR SALDO"
+              class="boton-dinero"
+            />
+          </fieldset>
+        </fieldset>
+      </div>
+    </div>
+
+
+    <script src="galgos.js"></script>
+  </body>
+</html>

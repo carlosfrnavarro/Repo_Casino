@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="ruleta4.css">
+</head>
+<body>
+    <header>
+		<div class="logo">
+			<img src="logoruleta.png" class="logo-img"/>
+			<h1>PABLO CANSINO ROULETTE</h1>
+		</div>	
+	</header>
+	<nav>
+		<ul>
+			<li><a href="inicio.html">INICIO</a></li>
+			<li><a href="inicio.html">REGLAS</a></li>
+            <li><a href="inicio.html">IDIOMA</a></li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">CONTACTO</a></li>
+            <li><p id="horaActual"></p></li>
+        </ul>
+	</nav>
+    <fieldset class="resultados">
+        <legend>ÚLTIMOS RESULTADOS</legend>
+        <p type="submit" class="resultados"></p>
+    </fieldset>
+    <div class="body">
+        <div id="barraDeProgreso-container">
+            <progress id="barraDeProgreso" value="30" max="30"></progress>
+            <p id="barraDeProgreso-text">HAZ TU APUESTA</p>
+        </div>        
+    <div class="form-container-left">
+            <form id="botones-izquierda">
+                <canvas id="canvas" width="500" height="500"></canvas>
+                <fieldset class="hotcold">
+                    <legend>HOT&COLD</legend>
+                    <p id="hot" type="submit" class="hot"></p>
+                    <p id="cold" type="submit" class="cold"></p>
+                </fieldset>
+            </form>
+            
+    </div>
+    <div class="form-container-center">
+        <form id="tablero">
+        <table>
+            <tr>
+                <td rowspan="3"><button onclick="seleccionarFicha(0, event)" class="green">0</button></td>
+                <td><button onclick="betOn(3, event)" class="red">3</button></td>
+                <td><button onclick="betOn(6, event)" class="blue">6</button></td>
+                <td><button onclick="betOn(9, event)" class="red">9</button></td>
+                <td><button onclick="betOn(12, event)" class="blue">12</button></td>
+                <td><button onclick="betOn(15, event)" class="red">15</button></td>
+                <td><button onclick="betOn(18, event)" class="blue">18</button></td>
+                <td><button onclick="betOn(21, event)" class="red">21</button></td>
+                <td><button onclick="betOn(24, event)" class="blue">24</button></td>
+                <td><button onclick="betOn(27, event)" class="red">27</button></td>
+                <td><button onclick="betOn(30, event)" class="blue">30</button></td>
+                <td><button onclick="betOn(33, event)" class="red">33</button></td>
+                <td><button onclick="betOn(36, event)" class="blue">36</button></td>
+                <td><button onclick="betOn2to1(1, event)" class="green">2 to 1</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="betOn(2, event)" class="blue">2</button></td>
+                <td><button onclick="betOn(5, event)" class="red">5</button></td>
+                <td><button onclick="betOn(8, event)" class="blue">8</button></td>
+                <td><button onclick="betOn(11, event)" class="red">11</button></td>
+                <td><button onclick="betOn(14, event)" class="blue">14</button></td>
+                <td><button onclick="betOn(17, event)" class="red">17</button></td>
+                <td><button onclick="betOn(20, event)" class="blue">20</button></td>
+                <td><button onclick="betOn(23, event)" class="red">23</button></td>
+                <td><button onclick="betOn(26, event)" class="blue">26</button></td>
+                <td><button onclick="betOn(29, event)" class="red">29</button></td>
+                <td><button onclick="betOn(32, event)" class="blue">32</button></td>
+                <td><button onclick="betOn(35, event)" class="red">35</button></td>
+                <td><button onclick="betOn2to1(2, event)" class="green">2 to 1</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="betOn(1, event)" class="red">1</button></td>
+                <td><button onclick="betOn(4, event)" class="blue">4</button></td>
+                <td><button onclick="betOn(7, event)" class="red">7</button></td>
+                <td><button onclick="betOn(10, event)" class="blue">10</button></td>
+                <td><button onclick="betOn(13, event)" class="red">13</button></td>
+                <td><button onclick="betOn(16, event)" class="blue">16</button></td>
+                <td><button onclick="betOn(19, event)" class="red">19</button></td>
+                <td><button onclick="betOn(22, event)" class="blue">22</button></td>
+                <td><button onclick="betOn(25, event)" class="red">25</button></td>
+                <td><button onclick="betOn(28, event)" class="blue">28</button></td>
+                <td><button onclick="betOn(31, event)" class="red">31</button></td>
+                <td><button onclick="betOn(34, event)" class="blue">34</button></td>
+                <td><button onclick="betOn2to1(3, event)" class="green">2 to 1</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="betOn()"></button></td>
+                <td colspan="4"><button onclick="betOn()" class="green">1st 12</button></td>
+                <td colspan="4"><button onclick="betOn()" class="green">2nd 12</button></td>
+                <td colspan="4"><button onclick="betOn()" class="green">3rd 12</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="betOn()"></button></td>
+                <td colspan="2"><button onclick="betOn()" class="green">1TO18</button></td>
+                <td colspan="2"><button onclick="betOn()" class="green">EVEN</button></td>
+                <td colspan="2"><button onclick="betOn()" class="red">RED</button></td>
+                <td colspan="2"><button onclick="betOn()" class="blue">BLACK</button></td>
+                <td colspan="2"><button onclick="betOn()" class="green">ODD</button></td>
+                <td colspan="2"><button onclick="betOn()" class="green">19TO36</button></td>
+            </tr>
+        </table>
+        </form>
+
+        <form id="segundo-formulario">
+            <div class="botones-circulares">
+                <button onclick="seleccionarFicha(10, event)" class="boton-circular-10"> 10</button>
+                <button onclick="seleccionarFicha(50, event)" class="boton-circular-50">50</button>
+                <button onclick="seleccionarFicha(100, event)" class="boton-circular-100">100</button>
+                <button onclick="seleccionarFicha(1000, event)" class="boton-circular-1k">1k</button>
+                <button onclick="seleccionarFicha(5000, event)" class="boton-circular-5k">5k</button>
+            </div>
+        </form>
+        <form id="tercer-formulario">
+            <div class="botones-juego">
+                
+            </div>
+        </form>
+    </div>
+    <div class="form-container-right">
+        <form id="botones-derecha">
+            <input type="button" value="JUGAR YA" class="girar" id='spin' />
+
+            <fieldset>
+                <legend>GESTIÓN DE FONDOS</legend>
+                <button type="button" class="boton-dinero" onclick="mostrarVentanaIngresoDinero(event)">INGRESAR DINERO</button>
+                <button type="button" id="retirarDinero" class="boton-dinero">RETIRAR DINERO</button>
+
+            </fieldset>
+
+
+            <fieldset>
+                <legend>APUESTAS</legend>
+                <p class="saldo">SALDO</p>
+                <p class="potencial">APOSTADO</p>
+            </fieldset>
+        </form>
+    </div>
+    </div>
+
+    <script src="ruleta4.js"></script>
+</body>
+</html>

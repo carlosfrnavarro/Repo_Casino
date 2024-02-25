@@ -1,0 +1,545 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: linear-gradient(to bottom, #3c2ed1, #d80b88);
+    color: #E6E6E6;
+}
+
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: transparent;
+    color: #fff;
+}
+
+header img {
+    height: 80px;
+}
+
+header button {
+    margin-right: 10px;
+    padding: 10px;
+    color: #fff; /* Color del texto */
+    background-color: transparent; /* Fondo transparente */
+    border: 2px solid #ff00dd; /* Borde blanco y su grosor */
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+header button:hover {
+    background-color: #ff00dd;
+}
+
+#depositMoney {
+    margin-right: 10px;
+    padding: 10px;
+    color: #fff; /* Color del texto */
+    background-color: #ff00dd; /* Fondo transparente */
+    border: 2px solid #ff00dd; /* Borde blanco y su grosor */
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#depositMoney:hover {
+    border: none;
+    background-color: #ffffff;
+    color: #ff00dd;
+}
+
+
+
+#helpButton {
+    width: 50px; /* Establece un ancho fijo */
+    height: 50px;
+    padding: 0px;
+    color: #ffffff; /* Cambia el color del texto */
+    /*background-color: #ff00dd; /* Cambia el color de fondo */
+    background: none;
+    border: 2px solid #ff00dd; /* Elimina el borde */
+    border-radius: 100%; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#helpButton:hover {
+    background-color: #ff00dd; /* Oscurece el botón al pasar el mouse */
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    color:#ffffff;
+}
+
+
+.divider {
+    display: inline-block; /* Para que se comporte como un elemento en línea */
+    height: 25px; /* Altura para igualar la altura de tus botones */
+    width: 2px; /* Ancho de la línea divisoria */
+    background-color: #ffffff; /* Color blanco para la línea */
+    margin: 0 15px; /* Espacio a los lados para separar de los botones */
+    vertical-align: middle; /* Para alinear verticalmente con los botones */
+}
+
+
+
+
+
+/* Estilos para la pantalla de ayuda */
+.help-screen {
+    position: fixed; /* Posición fija respecto al viewport */
+    top: 0; /* Alineado arriba */
+    right: -100%; /* Inicialmente oculto fuera del viewport */
+    width: 300px; /* Ancho de la pantalla de ayuda */
+    height: 100%; /* Altura completa */
+    background-color: #ff00dd;
+    color: #ffffff; /* Texto negro */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: -2px 0 5px rgba(255, 255, 255, 0.5); /* Sombra para dar efecto de elevación */
+    transition: right 0.5s ease; /* Transición suave para el desplazamiento */
+}
+
+/* Estilo cuando la pantalla de ayuda está activa */
+.help-screen.active {
+    right: 0; /* Desplaza la pantalla hacia dentro del viewport */
+}
+
+.close-help-screen {
+    position: absolute;
+    top: 5px; /* Más cerca del borde superior */
+    right: 1px; /* Más cerca del borde derecho */
+    border: none;
+    background: none;
+    color: #fff; /* Puedes ajustar el color si es necesario */
+    font-size: 20px; /* Ajusta el tamaño de la fuente si es necesario */
+    cursor: pointer;
+    display: none;
+}
+
+.help-screen h3 {
+    color: #ffffff; /* Asegura que el título se destaque con color blanco */
+    margin-bottom: 15px; /* Espacio debajo del título */
+    font-size: 22px; /* Tamaño de fuente para títulos */
+    text-align: center; /* Centra el texto del título */
+}
+
+.help-screen p, .help-screen ul, .help-screen li {
+    color: #E6E6E6; /* Color de texto para asegurar contraste con el fondo */
+    margin-bottom: 10px; /* Espacio entre párrafos y elementos de lista */
+    padding: 5px 10px; /* Espaciado interno para párrafos y elementos de lista */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente para los elementos */
+    border-radius: 10px; /* Bordes redondeados para párrafos y elementos de lista */
+    font-size: 16px; /* Tamaño de fuente adecuado para lectura */
+}
+
+.help-screen ul {
+    list-style-type: none; /* Remueve los estilos de lista por defecto */
+    padding-left: 20px; /* Espacio para ítems de lista */
+}
+
+.help-screen li::before {
+    content: "•"; /* Agrega un marcador personalizado */
+    color: #ff00dd; /* Color del marcador */
+    display: inline-block; /* Hace que el marcador sea en línea */
+    width: 20px; /* Espacio para el marcador */
+    margin-left: -20px; /* Alinea el marcador con el texto */
+}
+
+
+
+
+/* Estilos para el main */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Alineación de las imágenes al centro */
+main #games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main #games img {
+    width: 550px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Estilos para los juegos */
+.game {
+    position: relative;
+    display: inline-block; /* O flex, según tu diseño */
+    margin: 20px;
+    overflow: hidden; /* Para asegurar que el menú se desplace dentro del área de la imagen */
+    border-radius: 10px; /* Asegúrate de que el contenedor del juego tenga bordes redondeados si la imagen también los tiene */
+}
+
+.game img {
+    width: 600px; /* O el ancho que prefieras */
+    display: block;
+}
+
+.game-info {
+    position: absolute;
+    top: 0;
+    right: 0; /* Cambiado para que inicie desde el borde derecho de la imagen */
+    width: 250px; /* Ajusta según el contenido */
+    height: 100%; /* A la altura de la imagen */
+    background-color: rgba(66, 69, 224, 0.819); /* Semi-transparente */
+    color: #fff;
+    padding: 10px;
+    transition: transform 0.3s ease; /* Usamos transform para la transición */
+    transform: translateX(100%); /* Inicia oculto, movido hacia la derecha */
+    overflow: hidden;
+}
+
+.game:hover .game-info {
+    transform: translateX(0%); /* Se muestra al mover el cursor sobre el juego */
+}
+
+.game-info h2 {
+    color: #fff; /* Más coherente con el esquema de colores del sitio */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+.game-info p, .game-info ul, .game-info li {
+    background-color: rgba(164, 6, 255, 0.587); /* Fondo semi-transparente */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    margin: 10px 0; /* Margen superior e inferior */
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.game-info p {
+    color: #E6E6E6; /* Color coherente con el sitio */
+}
+
+.game-info ul {
+    list-style-type: none; /* Remover estilo de lista predeterminado */
+}
+
+.game-info li {
+    margin-bottom: 5px; /* Espacio entre elementos de la lista */
+    color: #ffffff; /* Verde claro para una lectura fácil */
+    padding-left: 20px; /* Espaciado a la izquierda para los ítems de la lista */
+    position: relative; /* Para estilizar los bullets */
+}
+
+.game-info li:before {
+    content: "•"; /* Bullet personalizado */
+    color: #ff00dd; /* Color dorado para los bullets */
+    position: absolute; /* Posicionamiento absoluto */
+    left: 0; /* Alineado a la izquierda */
+}
+
+.play-now-btn {
+    display: none; /* Asegura que el botón sea un bloque para aplicar margin auto */
+    margin: auto; /* Centra horizontalmente */
+    position: absolute; /* Posicionamiento absoluto para el centrado vertical */
+    top: 50%; /* Posición desde la parte superior del contenedor */
+    left: 50%; /* Posición desde el lado izquierdo del contenedor */
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: #fff; /* Color del texto */
+    background-color: #ff00dd; /* Fondo transparente */
+    border: 2px solid #ff00dd; /* Borde blanco y su grosor */
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.play-now-btn:hover {
+    border: none;
+    background-color: #ffffff;
+    color: #ff00dd;
+}
+
+
+
+
+footer {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #E6E6E6;
+    background: transparent;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer-top,
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social img {
+    margin: 0 5px;
+    height: 24px; /* Ajusta el tamaño según sea necesario */
+}
+
+.footer-bottom {
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logos img {
+    height: 40px; /* Ajusta el tamaño según sea necesario */
+    margin: 0 10px;
+}
+
+footer a {
+    color: #E6E6E6;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-top,
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-social img,
+    .footer-logos img {
+        height: 20px;
+    }
+}
+
+/* Estilos para tabletas */
+@media (max-width: 1024px) {
+    header img {
+        height: 60px;
+    }
+
+    header button {
+        margin-right: 5px;
+        padding: 5px;
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    #helpButton {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    main #games img {
+        width: 50%; /* Ajusta las imágenes para que ocupen menos espacio */
+        margin: 10px;
+    }
+
+    .footer-social img,
+    .footer-logos img {
+        height: 24px;
+    }
+
+    .footer-column {
+        margin-bottom: 20px; /* Añade espacio entre las columnas del pie de página */
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group {
+        margin-top: 10px;
+    }
+
+    main #games img {
+        width: 87%; /* Las imágenes ocupan casi todo el ancho de la pantalla */
+        margin: 10px auto; /* Centra las imágenes horizontalmente */
+    }
+
+    .footer-top, .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-social img,
+    .footer-logos img {
+        height: 20px;
+    }
+
+    .help-screen {
+        width: 100%; /* La pantalla de ayuda ocupa todo el ancho */
+    }
+
+    .close-help-screen {
+        position: absolute;
+        top: 5px;
+        right: 1px;
+        border: 2px solid #fff;
+        background: none; /* Fondo oscuro para contraste */
+        color: #fff;
+        font-size: 16px; /* Ajusta según necesidad */
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(1, 14, 70); /* O cualquier otro color que prefieras */
+    z-index: 9999; /* Asegura que el preloader esté sobre otros elementos */
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* Estilos adicionales para ajustar el diseño en orientación vertical */
+@media (max-height: 800px) {
+    main {
+        padding: 10px 0; /* Reduce el espacio superior e inferior en el contenido principal */
+    }
+
+    footer .footer-column,
+    footer .footer-social,
+    footer .footer-logos {
+        padding: 5px; /* Reduce el padding en el pie de página para ahorrar espacio */
+    }
+}
+

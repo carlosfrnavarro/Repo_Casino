@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casino Online</title>
+    <link rel="stylesheet" href="casino.css" />
+  </head>
+  <body>  
+    <header>
+      <img src="logocasino.png" alt="Logo del Casino" />
+      <div class="button-group">
+        <button class="botonayuda" id="helpButton">?</button>
+        <span class="divider"></span>
+        <button id="withdrawMoney">Retirar Dinero</button>
+        <button id="ingresarSaldo">Ingresar Dinero</button>
+      </div>
+
+      <div id="helpScreen" class="help-screen">
+        <button id="closeHelpScreen" class="close-help-screen">x</button>
+        <h3>Ingreso de Dinero</h3>
+        <p>Registro y Acceso: Lo primero es registrarte en el casino en línea. Una vez registrado, inicia sesión con tu nombre de usuario y contraseña.</p>
+        <p>Visita la Sección de Depósito: En el menú principal, busca y selecciona la opción de 'Depósito' o 'Ingresar Dinero'.</p>
+        <p>Elige tu Método de Pago: Selecciona tu método de pago preferido de entre las opciones disponibles (tarjeta de crédito/debito, monederos electrónicos, transferencia bancaria, etc.).</p>
+        <p>Ingresa la Cantidad: Decide cuánto dinero quieres depositar y completa los detalles requeridos.</p>
+        <p>Confirma la Transacción: Revisa la información y confirma la transacción. El dinero debería reflejarse en tu cuenta del casino de forma inmediata o dentro de poco tiempo, dependiendo del método de pago.</p>
+        <h3>Retirada de Dinero</h3>
+        <p>Ve a la Sección de Retiro: En el menú, busca la opción de 'Retirar' o 'Retirada de Dinero'.</p>
+        <p>Elige Método de Retiro: Escoge cómo te gustaría recibir tu dinero. Las opciones suelen ser similares a las de depósito.</p>
+        <p>Cantidad a Retirar: Ingresa cuánto dinero deseas retirar de tu cuenta del casino.</p>
+        <p>Confirma la Transacción: Después de verificar los detalles, confirma tu solicitud de retiro.</p>
+        <p>Tiempo de Procesamiento: Los retiros pueden tardar desde unas horas hasta varios días laborables, dependiendo del método elegido.</p>
+      </div>
+      
+    </header>
+    <main>
+      <div id="preloader">
+      <div id="loader"></div>
+    </div>  
+      <section id="games">
+        <div class="game">
+          <a href="index.html">
+            <img src="miniaturagalgos.jpg" alt="Juego 1" />
+          </a>
+          <div class="game-info">
+            <h2>PABLO CANINO</h2>
+            <p>
+              Sumérgete en la emoción de las carreras de galgos. Elige a tu
+              favorito y apuesta por la victoria.
+            </p>
+            <ul>
+              <li>Selecciona un galgo entre los competidores.</li>
+              <li>Apuesta por tu galgo favorito.</li>
+              <li>Observa la carrera en tiempo real.</li>
+              <li>Gana premios si tu galgo llega primero.</li>
+            </ul>
+            <button class="play-now-btn">Juega Ahora</button>
+          </div>
+        </div>
+        <div class="game">
+          <a href="ruleta4.html">
+            <img src="miniaturaruleta.jpg" alt="Juego 2" />
+          </a>
+          <div class="game-info">
+            <h2>LA RULETA</h2>
+            <p>
+              Experimenta la emoción del giro de la ruleta. Elige tus números de la suerte y apuesta por la victoria.
+            </p>
+            <ul>
+              <li>Selecciona tus números o colores favoritos en la ruleta.</li>
+              <li>Apuesta por tus elecciones.</li>
+              <li>Observa el giro de la ruleta en tiempo real.</li>
+            </ul>
+            <button class="play-now-btn">Juega Ahora</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-top">
+        <div class="footer-column">
+          <a href="juego-seguro.html">Juego más seguro</a>
+          <a href="autoexclusion.html">Autoexclusión</a>
+          <a href="ayuda-contacto.html">Ayuda y Contacto</a>
+        </div>
+        <div class="footer-column">
+          <p>
+            Se prohíbe la participación de menores y personas consideradas
+            incapaces legalmente o por orden judicial. PABLO CANSINO opera en
+            España en virtud de licencias otorgadas y reguladas por SHDP.
+          </p>
+        </div>
+        <div class="footer-social">
+          <a href="https://facebook.com"
+            ><img src="facebook.png" alt="Facebook"
+          /></a>
+          <a href="https://twitter.com"><img src="x.png" alt="Twitter" /></a>
+          <a href="https://twitter.com"
+            ><img src="instagram.png" alt="Twitter"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-column">
+          <a href="privacidad.html">Política de privacidad</a>
+          <a href="cookies.html">Política de cookies</a>
+        </div>
+        <div class="footer-logos">
+          <img src="Autoprohicion.png" alt="Sello de Aprobación 1" />
+          <img src="18.png" alt="Sello de Aprobación 2" />
+          <img src="logo_jugarbien.png" alt="Sello de Aprobación 2" />
+          <img src="sello1.jpg" alt="Sello de Aprobación 2" />
+        </div>
+        <div class="footer-column">
+          <p>
+            El juego puede ser adictivo. Por favor, juega con responsabilidad.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("helpButton")
+        .addEventListener("click", function () {
+          var helpScreen = document.getElementById("helpScreen");
+          helpScreen.classList.toggle("active"); 
+        });
+
+      document
+        .getElementById("closeHelpScreen")
+        .addEventListener("click", function () {
+          var helpScreen = document.getElementById("helpScreen");
+          helpScreen.classList.remove("active");
+        });
+
+      // Escuchar clics en todo el documento
+      document.addEventListener("click", function (event) {
+        var helpScreen = document.getElementById("helpScreen");
+        var helpButton = document.getElementById("helpButton");
+        var isClickInsideHelpScreen = helpScreen.contains(event.target);
+        var isClickHelpButton = helpButton.contains(event.target);
+
+        
+        if (
+          !isClickInsideHelpScreen &&
+          !isClickHelpButton &&
+          helpScreen.classList.contains("active")
+        ) {
+          helpScreen.classList.remove("active");
+        }
+      });
+      document.addEventListener("DOMContentLoaded", function() {
+    // Oculta el preloader inicialmente
+    document.getElementById("preloader").style.display = "none";
+
+    // Añade el evento de clic a las imágenes o enlaces
+    document.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            // Previene la acción por defecto
+            e.preventDefault();
+
+            // Muestra el preloader
+            document.getElementById("preloader").style.display = "block";
+
+            // Retrasa la redirección para mostrar el preloader
+            setTimeout(function() {
+                window.location.href = link.getAttribute("href");
+            }, 1000);
+        });
+    });
+});
+
+
+    </script>
+  </body>
+</html>
